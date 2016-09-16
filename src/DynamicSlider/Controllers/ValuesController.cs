@@ -11,9 +11,10 @@ namespace DynamicSlider.Controllers
     {
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public int Get()
         {
-            return new string[] { "value1", "value2" };
+            Random r = new Random();
+            return r.Next(0, 100);
         }
 
         // GET api/values/5
